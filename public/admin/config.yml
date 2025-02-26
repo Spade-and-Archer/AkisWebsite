@@ -1,0 +1,37 @@
+
+### public/admin/config.yml
+```yaml
+backend:
+  name: github
+  repo: yourusername/AkisWebsite
+  branch: main
+
+# These lines should be adjusted based on your specific setup
+media_folder: "public/images"
+public_folder: "/images"
+local_backend: true
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  
+  - name: "images"
+    label: "Images"
+    folder: "content/images"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Tags", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"}}
+      - {label: "Artist", name: "artist", widget: "string"}
+      - {label: "Rating", name: "rating", widget: "select", options: ["safe", "questionable", "explicit"]}
+```
