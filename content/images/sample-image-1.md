@@ -4,6 +4,7 @@ image: /images/placeholder-1.jpg
 description: This is an image of the sea
 tags:
   - sample
+  - test
   - featured
   - sea
 artist: Artist Name
