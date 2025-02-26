@@ -14,7 +14,7 @@ export default defineConfig({
       '@content': path.resolve(__dirname, './content')
     }
   },
-  base: '/AkisWebsite/',
+  base: '/',
   build: {
     outDir: 'docs'
   }

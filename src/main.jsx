@@ -4,12 +4,9 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
 
-// Determine the basename for GitHub Pages
-const basename = import.meta.env.PROD ? '/AkisWebsite' : '/';
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename={import.meta.env.PROD ? '/AkisWebsite' : '/'}>
+    <BrowserRouter basename={'/'}>
       <App />
     </BrowserRouter>
   </React.StrictMode>,

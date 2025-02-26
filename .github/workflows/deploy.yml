@@ -29,11 +29,11 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       
-      - name: Build
-        run: npm run build
-
       - name: Create .nojekyll file
         run: touch docs/.nojekyll
+
+      - name: Build
+        run: npm run build
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
