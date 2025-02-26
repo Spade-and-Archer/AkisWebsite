@@ -9,7 +9,7 @@ const basename = import.meta.env.PROD ? '/AkisWebsite' : '/';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename={basename}>
+    <BrowserRouter basename={import.meta.env.PROD ? '/AkisWebsite' : '/'}>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
