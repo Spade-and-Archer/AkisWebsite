@@ -14,7 +14,7 @@ export default defineConfig({
       '@content': path.resolve(__dirname, './content')
     }
   },
-  base: process.env.NODE_ENV === 'production' ? '/AkisWebsite/' : '/',
+  base: '/AkisWebsite/',
   build: {
     outDir: 'docs'
   }
