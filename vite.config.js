@@ -6,7 +6,13 @@ import { plugin as markdown } from 'vite-plugin-markdown';
 export default defineConfig({
   plugins: [
     react(),
-    markdown({ mode: 'yaml' })
+    markdown({ mode: 'yaml' }),
+    {
+        name: 'create-nojekyll',
+        closeBundle() {
+          fs.writeFileSync('docs/.nojekyll', '');
+        }
+      }
   ],
   resolve: {
     alias: {

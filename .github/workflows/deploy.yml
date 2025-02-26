@@ -31,6 +31,7 @@ jobs:
       
       - name: Create .nojekyll file
         run: touch docs/.nojekyll
+        
 
       - name: Build
         run: npm run build
